@@ -19,8 +19,7 @@
     "test:bun": "bun modules/common.cjs && bun modules/esm.mjs",
     "test:unit": "vitest --no-watch",
     "test": "npm run test:node && npm run test:unit",
-    "prepublishOnly": "npm run build:ts",
-    "postinstall": "node scripts/ensure-native-addon.mjs",
+    "prepare": "npm run build",
     "lint": "eslint . --ext .ts",
     "lint:fix": "eslint . --ext .ts --fix",
     "format": "prettier --write \"**/*.{ts,js,json,md}\""
